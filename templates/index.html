@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <header>
+        <h3>
+            <a href="">
+                Consultoria
+            </a></h3>
+    </header>
+    <main>
+        <h1>
+            Treinos
+        </h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Dia da Semana</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .treinos}}
+                <tr>
+                    <td>{{.Nome}}</td>
+                    <td>{{.Descricao}}</td>
+                    <td>{{.DiaDaSemana}}</td>
+                </tr>
+                {{end}}
+            </tbody>
+            
+        </table>
+    </main>
+    <footer></footer>
+
+    
+    
+</body>
+</html>
