@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fit Tracker</title>
     <link rel="stylesheet" href="../styles/index.css">
 </head>
 <body>
@@ -26,20 +26,27 @@
                 </tr>
             </thead>
             <tbody>
+                <h2>Treino </h2>
                 {{range .treinos}}
+                
                 <tr>
                     <td>{{.Nome}}</td>
                     <td>{{.Descricao}}</td>
                     <td>{{.DiaDaSemana}}</td>
+                    <td><a href="edit/{{.ID}}">Editar</a></td>
+                    <td><button onclick="onDelete('{{.ID}}')" class="btn btn-danger">Deletar</button></td>
+
                 </tr>
+                <br>
                 {{end}}
             </tbody>
             
         </table>
+        <a class="new-button" href="create-treino">Novo Treino</a>
     </main>
     <footer></footer>
 
-    
+    <script src="../scripts/index.js">Deletar</script>
     
 </body>
 </html>

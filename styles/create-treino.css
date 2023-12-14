@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  color: #ddd;
+  font-family: "Fjalla One", sans-serif;
+}
+
+header {
+  background-color: #ddd;
+  /* padding-top: 10px; */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+  color: #0caba8;
+}
+
+header a:hover {
+  color: #015958;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+}
+.button-submit{
+    width: 100px;
+    height: 30px;
+    font-family: "Fjalla One", sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px #ddd;
+}
+
+.button-submit:hover{
+    background-color: #4b4b4b;
+    color: #ddd;
+}
+
+.div-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}

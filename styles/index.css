@@ -1,56 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@100&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background-color: #000;
-    color: #ddd;
-    font-family: 'Fjalla One', sans-serif;
+body {
+  background-color: #000;
+  color: #ddd;
+  font-family: "Fjalla One", sans-serif;
 }
 
-header{
-    background-color: #ddd;
-    /* padding-top: 10px; */
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    
+header {
+  background-color: #ddd;
+  /* padding-top: 10px; */
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
-header a{
-    text-decoration: none;
-    color: #0CABA8;
+header a {
+  text-decoration: none;
+  color: #0caba8;
 }
 
-header a:hover{
-    color: #015958
+header a:hover {
+  color: #015958;
 }
 
-main{
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 main table th,
 main table td {
-    padding: 10px;
-    text-align: left; /* Mantenha o texto à esquerda */
+  padding: 10px;
+  text-align: left; /* Mantenha o texto à esquerda */
 }
 
 main table th {
-    background-color: #ddd;
-    color: #0CABA8;
+  background-color: #ddd;
+  color: #0caba8;
 }
 
+/* essa parte afeta apenas os titulos da tabela */
+main table thead tr th {
+  width: 200px;
+
+  text-align: center;
+}
+
+/* essa parte afeta apenas as lihhas com os dados da tabela */
+main table tbody tr td {
+  width: 200px;
+
+  text-align: center;
+}
+
+/* define o tempo da animação ao passar o mouse */
 main table tbody tr {
-    display: flex;
-    gap: 100px;
-    align-items: center;
+  transition: all 0.3s;
 }
 
+/* coloca uma animação de mudar a cor da linha do dado quando passa o mouse por cima */
+main table tbody tr:hover {
+  background: #212121;
+}
+
+.new-button{
+    text-decoration: none;
+    color: #ddd;
+    background-color: #015958;
+    width: 100px;
+    height: 32px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px #ddd;
+}
+.new-button:hover{
+    background-color: #004544;
+    color: #0caba8;
+}
+
+td a{
+    text-decoration: none;
+    color: white;
+}
+
+td a:hover{
+    color: #015958
+}

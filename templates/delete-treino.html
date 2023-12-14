@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Treino para deletar</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Dia da Semana</th>
+            </tr>
+        </thead>
+        <tbody>
+            <h2>Treino </h2>
+            {{range .treinos}}
+            
+            <tr>
+                <td>{{.Nome}}</td>
+                <td>{{.Descricao}}</td>
+                <td>{{.DiaDaSemana}}</td>
+                <td><a href="edit/{{.ID}}">Editar</a></td>
+                <td><a href="/delete/{{.ID}}">Deletar</a></td>
+            </tr>
+            <br>
+            {{end}}
+        </tbody>
+        
+    </table>
+</body>
+</html>
