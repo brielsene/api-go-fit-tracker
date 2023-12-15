@@ -16,12 +16,23 @@
     <main>
         <h1>Edit Treino</h1>
         <form action="insert" method="POST">
+            <input type="hidden" name="id" value="{{.treino.ID}}" >
             <label for="">Nome</label>
             <input type="text" name="nome" value="{{.treino.Nome}}">
             <label for="">Descricao</label>
             <input type="text" name="descricao" value="{{.treino.Descricao}}">
             <label for="">Dia da Semana</label>
-            <input type="text" name="diadasemana" value="{{.treino.DiaDaSemana}}">
+            <select id="diadasemana" name="diadasemana">
+            <option value="Segunda" {{if eq .treino.DiaDaSemana "Segunda"}}selected{{end}}>Segunda</option>
+            <option value="Terça" {{if eq .treino.DiaDaSemana "Terça"}}selected{{end}}>Terça</option>
+            <option value="Quarta" {{if eq .treino.DiaDaSemana "Quarta"}}selected{{end}}>Quarta</option>
+            <option value="Quinta" {{if eq .treino.DiaDaSemana "Quinta"}}selected{{end}}>Quinta</option>
+            <option value="Sexta" {{if eq .treino.DiaDaSemana "Sexta"}}selected{{end}}>Sexta</option>
+            <option value="Sábado" {{if eq .treino.DiaDaSemana "Sábado"}}selected{{end}}>Sábado</option>
+            <option value="Domingo" {{if eq .treino.DiaDaSemana "Domingo"}}selected{{end}}>Domingo</option>
+            </select>
+
+            
             <div class="div-button">
                 <input class="button-submit" type="submit" value="Salvar">
 

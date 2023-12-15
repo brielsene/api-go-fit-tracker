@@ -93,6 +93,19 @@ td a{
     color: white;
 }
 
-td a:hover{
+td a:hover {
     color: #015958
+}
+
+.btn-danger{
+  background-color: transparent;
+  border: none;
+  color: #ddd;
+  font-family: "Fjalla One", sans-serif;
+  cursor: pointer;
+
+}
+
+.btn-danger:hover{
+  color: #015958
 }

@@ -117,3 +117,21 @@ func GetHtmlEdit(c *gin.Context) {
 		"treino": &treino,
 	})
 }
+
+func InsertEditHTML(c *gin.Context) {
+	nome := c.PostForm("nome")
+	descricao := c.PostForm("descricao")
+	diaDaSemana := c.PostForm("diadasemana")
+	id := c.PostForm("id")
+
+	var treino models.Treino
+	database.DB.First(&treino, id)
+
+	treino.Nome = nome
+	treino.Descricao = descricao
+	treino.DiaDaSemana = diaDaSemana
+
+	database.DB.Model(&treino).UpdateColumns(treino)
+	c.Redirect(http.StatusSeeOther, "/index")
+
+}

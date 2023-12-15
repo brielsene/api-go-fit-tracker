@@ -21,5 +21,6 @@ func HandleRequests() {
 	r.POST("/insert", controllers.NewTreinoHTML)
 	r.DELETE("/delete/id/:id", controllers.DeleteTreinoHTML)
 	r.GET("/edit/:id", controllers.GetHtmlEdit)
+	r.POST("/edit/insert", controllers.InsertEditHTML)
 	r.Run(":8080")
 }
